@@ -16,6 +16,8 @@ clean: ## Clean build artifacts
 .PHONY: setup
 setup: ## Bootstrap for local development
 	brew bundle install
+	git submodule update --init --recursive
+	$(MAKE) -C usbboot
 
 # Via https://www.thapaliya.com/en/writings/well-documented-makefiles/
 # Note: The `##@` comments determine grouping
