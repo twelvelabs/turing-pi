@@ -1,1 +1,6 @@
 Brewfile.lock.json
+
+images
+
+usbboot/bin2c.dSYM
+usbboot/rpiboot.dSYM

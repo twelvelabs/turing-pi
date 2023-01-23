@@ -1,1 +1,5 @@
+brew 'gum'
+brew 'jq'
 brew 'libusb'
+brew 'pv'
+brew 'xz'
