@@ -11,9 +11,17 @@ images/raspios.img: images/raspios.img.xz
 
 ##@ App
 
+.PHONY: download
+download: images/raspios.img ## Download Raspberry Pi OS image
+	@echo Image downloaded
+
 .PHONY: flash
-flash: images/raspios.img ## Flash and configure a compute module
+flash: image ## Flash and configure a compute module
 	./bin/flash.sh
+
+.PHONY: configure
+configure: ## Configure a compute module
+	./bin/configure.sh
 
 .PHONY: clean
 clean: ## Delete downloaded artifacts
